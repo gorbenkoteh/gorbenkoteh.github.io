@@ -15,7 +15,6 @@ bundle exec jekyll build
 
 echo "Syncing to 91.188.212.199..."
 
-rsync -avz --checksum --delete -e "ssh -i /c/Users/roman/.ssh/gorbenkoteh2 -p 2222" ./_site/ user@91.188.212.199:/var/www/gorbenkotech/
 
 # 3. Результат
 if [ $? -eq 0 ]; then
