@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Волонтерство на "Всемирных играх дружбы"
+title: Волонтерство на «Всемирных играх дружбы»
 description: Волонтерство на "Всемирных играх дружбы"
 img: assets/img/sport/wfgames/wfgames.png
 importance: 3

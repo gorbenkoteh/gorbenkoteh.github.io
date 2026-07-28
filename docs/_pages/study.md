@@ -1,10 +1,12 @@
 ---
 layout: page
-title: Учусь(Учился)
+title: Учусь
 permalink: /study/
 description: Учусь.
 nav: true
 nav_order: 5
+lang: ru
+lang_ref: /en/study/
 display_categories: [study]
 horizontal: false
 ---

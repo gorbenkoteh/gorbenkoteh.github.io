@@ -5,6 +5,8 @@ permalink: /about/
 description: Контакты.
 nav: true
 nav_order: 8
+lang: ru
+lang_ref: /en/about/
 display_categories: [about]
 horizontal: false
 ---
@@ -53,23 +55,3 @@ horizontal: false
     </div>
 </div>
 
-Сертификаты о пройденном обучении. 
-
-## SAP CIS certificates::
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/cert/sap_cis.jpg" title="Сертификаты SAP" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div><br/>
-
-## SAP Certified Consultant:
-
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/cert/youracclaim.jpg" title="Сертификаты SAP" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div><br/>
-
-* <a href="https://www.youracclaim.com/badges/320ce7e1-0d8b-407c-b74c-9cd94dc9da47/public_url">SAP Certified Technology Associate - System Administration (SAP HANA as a Database) with SAP NetWeaver 7.5</a>
-
-* <a href="https://www.youracclaim.com/badges/ccb409ab-da98-4c3d-aaab-728df028e15a/public_url">SAP Certified Development Associate - SAP HANA 2.0 (SPS04)</a>

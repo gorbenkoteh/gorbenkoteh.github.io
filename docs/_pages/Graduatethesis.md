@@ -5,6 +5,10 @@ title: Кандидатская
 description: Кандидатская десертация
 nav: true
 nav_order: 2
+nav_url: /projects/Graduatethesis/
+lang: ru
+lang_ref: /en/graduatethesis/
+redirect: /projects/Graduatethesis/
 ---
 
 <!-- _pages/graduatethesis.md -->

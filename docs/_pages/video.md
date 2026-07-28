@@ -5,6 +5,8 @@ permalink: /Video/
 description: Описание YouTube/RuTube каналов.
 nav: true
 nav_order: 3
+lang: ru
+lang_ref: /en/video/
 display_categories: [video]
 horizontal: false
 ---

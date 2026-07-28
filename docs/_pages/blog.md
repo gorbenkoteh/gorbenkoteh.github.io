@@ -4,6 +4,8 @@ permalink: /blog/
 title: Блог
 nav: true
 nav_order: 1
+lang: ru
+lang_ref: /en/blog/
 pagination:
   enabled: true
   collection: posts

@@ -18,8 +18,10 @@ category: sport
 </div>
 
 
-
 "2022 год":<br/>
+<br/>
+Видео:
+<br/>
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
      <iframe width="800" height="515" src="https://www.youtube.com/embed/BUW_W9Nfkgk?si=nDDjzegWwKB-QAYj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -65,7 +67,9 @@ category: sport
 </div>
 
 "2024 год":<br/>
-
+<br/>
+Видео:
+<br/>
 <div class="row">
 <div class="col-sm mt-3 mt-md-0">
   <iframe width="800" height="515" src="https://www.youtube.com/embed/18iCLUTQWF4?si=lTEuOI-Shd7uPujf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -81,5 +85,19 @@ category: sport
 <div class="row justify-content-sm-center">
     <div class="col-sm-8 mt-3 mt-md-0">
         {% include figure.liquid path="assets/img/sport/cycling/sadovoe2024_2.jpg" title="Садовое Кольцо 2024" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+
+"2026 год":<br/>
+
+<div class="row justify-content-sm-center">
+    <div class="col-sm-8 mt-3 mt-md-0">
+        {% include figure.liquid path="assets/img/sport/cycling/sadovoe2026.JPG" title="Садовое Кольцо 2026" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+
+<div class="row justify-content-sm-center">
+    <div class="col-sm-8 mt-3 mt-md-0">
+        {% include figure.liquid path="assets/img/sport/cycling/sadovoe2026_2.JPG" title="Садовое Кольцо 2026" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>

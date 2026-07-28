@@ -5,6 +5,8 @@ title: Волонтёрство
 description: Волонтёрство
 nav: true
 nav_order: 6
+lang: ru
+lang_ref: /en/volonter/
 display_categories: [volonter]
 horizontal: false
 ---

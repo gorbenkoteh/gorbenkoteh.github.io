@@ -5,6 +5,8 @@ permalink: /sport/
 description: Занятия спортом.
 nav: true
 nav_order: 7
+lang: ru
+lang_ref: /en/sport/
 display_categories: [sport]
 horizontal: false
 ---

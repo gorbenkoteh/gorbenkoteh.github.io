@@ -5,6 +5,8 @@ permalink: /projects/
 description: Описание различных проектов.
 nav: true
 nav_order: 3
+lang: ru
+lang_ref: /en/projects/
 horizontal: false
 ---
 

@@ -66,7 +66,15 @@ category: sport
     </div>
 </div>
 
- "2024 год" (участие). <br/>
+ "2024 год" (участие в полумарафоне). <br/>
+
+<div class="row justify-content-sm-center">
+    <div class="col-sm-8 mt-3 mt-md-0">
+        {% include figure.liquid path="assets/img/sport/marathon/halfmarathon_2024.jpg" title="Полумарафон 2024" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+
+ "2024 год" (участие в марафоне). <br/>
 
  <div class="row justify-content-sm-center">
     <div class="col-sm-8 mt-3 mt-md-0">
@@ -83,6 +91,20 @@ category: sport
  <div class="row justify-content-sm-center">
     <div class="col-sm-8 mt-3 mt-md-0">
         {% include figure.liquid path="assets/img/sport/marathon/marathon2024_news3.JPG" title="Марафон 2024" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+
+ "2025 год". <br/>
+
+<div class="row justify-content-sm-center">
+    <div class="col-sm-8 mt-3 mt-md-0">
+        {% include figure.liquid path="assets/img/sport/marathon/Marathon2025.JPG" title="Марафон 2025" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+
+<div class="row justify-content-sm-center">
+    <div class="col-sm-8 mt-3 mt-md-0">
+        {% include figure.liquid path="assets/img/sport/marathon/Marathon2025_2.JPG" title="Марафон 2025" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 

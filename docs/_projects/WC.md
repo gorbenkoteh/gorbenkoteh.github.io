@@ -30,15 +30,22 @@ category: sport
      <iframe width="800" height="515" src="https://www.youtube.com/embed/RwsGuiGuozU?si=w9beT26xSImEq0IT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
 </div> 
-
+<br/>
  "World Class Cycle Challenge". <br/>
-
+<br/>
  <div class="row">
     <div class="col-sm mt-3 mt-md-0">
  <iframe width="800" height="515" src="https://www.youtube.com/embed/6uAhNOYgevU?si=dVp9GcxAYwvXLVVH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
 </div> 
-
+<br/>
+Победа в одном из соревнований. <br/>
+<div class="row justify-content-sm-center">
+    <div class="col-sm-8 mt-3 mt-md-0">
+        {% include figure.liquid path="assets/img/sport/worldclass/wc_win.jpg" title="World Class Gallery" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<br/>
  "Фотогалерея". <br/>
 
 <div class="row justify-content-sm-center">

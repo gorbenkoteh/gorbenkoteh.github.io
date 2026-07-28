@@ -1,10 +1,12 @@
 ---
 layout: page
-title: Учёба
+title: Курсы
 permalink: /teaching/
-description: Учёба
+description: Курсы
 nav: true
 nav_order: 3
+lang: ru
+lang_ref: /en/teaching/
 display_categories: [teaching]
 horizontal: false
 ---

@@ -1,9 +1,16 @@
 <header>
+  {% comment %} Language detection: pages without a lang are treated as Russian {% endcomment %}
+  {% assign current_lang = page.lang | default: 'ru' %}
+  {% if current_lang == 'en' %}
+    {% assign home_url = '/en/' %}
+  {% else %}
+    {% assign home_url = '/' %}
+  {% endif %}
   <!-- Nav Bar -->
   <nav id="navbar" class="navbar navbar-light navbar-expand-sm {% if site.navbar_fixed %}fixed-top{% else %}sticky-top{% endif %}" role="navigation">
     <div class="container">
-      {% if page.permalink != '/' %}
-        <a class="navbar-brand title font-weight-lighter" href="{{ site.baseurl }}/">
+      {% if page.permalink != home_url %}
+        <a class="navbar-brand title font-weight-lighter" href="{{ home_url | relative_url }}">
           {% if site.title == 'blank' %}
             {% if site.first_name %}
               <span class="font-weight-bold">
@@ -42,15 +49,19 @@
 
       <div class="collapse navbar-collapse text-right" id="navbarNav">
         <ul class="navbar-nav ml-auto flex-nowrap">
-          {% for page in site.pages %}
-            {% if page.permalink == '/' %} {% assign about_title = page.title %} {% endif %}
+          {% assign about_title = '' %}
+          {% for pg in site.pages %}
+            {% if pg.permalink == home_url %} {% assign about_title = pg.title %} {% endif %}
           {% endfor %}
+          {% if about_title == '' %}
+            {% if current_lang == 'en' %}{% assign about_title = 'Home' %}{% else %}{% assign about_title = 'Главная' %}{% endif %}
+          {% endif %}
 
-          <!-- About -->
-          <li class="nav-item {% if page.permalink == '/' %}active{% endif %}">
-            <a class="nav-link" href="{{ '/' | relative_url }}">
+          <!-- About / Home -->
+          <li class="nav-item {% if page.permalink == home_url %}active{% endif %}">
+            <a class="nav-link" href="{{ home_url | relative_url }}">
               {{- about_title }}
-              {% if page.permalink == '/' %}
+              {% if page.permalink == home_url %}
                 <span class="sr-only">(current)</span>
               {% endif %}
             </a>
@@ -59,7 +70,8 @@
           <!-- Other pages -->
           {% assign sorted_pages = site.pages | sort: 'nav_order' %}
           {% for p in sorted_pages %}
-            {% if p.nav and p.autogen == null %}
+            {% assign p_lang = p.lang | default: 'ru' %}
+            {% if p.nav and p.autogen == null and p_lang == current_lang %}
               {% if p.dropdown %}
                 {% assign has_active_child = false %}
                 {% for child in p.children %}
@@ -96,7 +108,7 @@
                 </li>
               {% else %}
                 <li class="nav-item {% if page.url contains p.permalink %}active{% endif %}">
-                  {% if p.permalink contains '/blog/' %}{% assign url = '/blog/' %} {% else %}{% assign url = p.url %}{% endif %}
+                  {% if p.nav_url %}{% assign url = p.nav_url %}{% elsif p.permalink contains '/blog/' %}{% if current_lang == 'en' %}{% assign url = '/en/blog/' %}{% else %}{% assign url = '/blog/' %}{% endif %}{% else %}{% assign url = p.url %}{% endif %}
                   <a class="nav-link" href="{{ url | relative_url }}">
                     {{- p.title }}
                     {% if page.url contains p.url %}
@@ -116,6 +128,22 @@
               </button>
             </li>
           {% endif %}
+
+          <!-- Language toggle -->
+          {% if current_lang == 'en' %}
+            {% assign lang_target = page.lang_ref | default: '/' %}
+            {% assign lang_label = 'RU' %}
+            {% assign lang_title = 'Русская версия' %}
+          {% else %}
+            {% assign lang_target = page.lang_ref | default: '/en/' %}
+            {% assign lang_label = 'EN' %}
+            {% assign lang_title = 'English version' %}
+          {% endif %}
+          <li class="nav-item lang-toggle-item">
+            <a class="nav-link lang-toggle" href="{{ lang_target | relative_url }}" title="{{ lang_title }}" aria-label="{{ lang_title }}">
+              {{- lang_label -}}
+            </a>
+          </li>
         </ul>
       </div>
     </div>
