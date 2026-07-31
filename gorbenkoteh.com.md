@@ -124,3 +124,39 @@ docker run --rm -v "$PWD":/srv/jekyll -w /srv/jekyll \
   `Gemfile.lock` — артефакты сборки в git не попадают.
 - **Спецкейс блога в навбаре:** для permalink с `/blog/` ссылка жёстко
   подставляется (`/blog/` или `/en/blog/`) — учитывать при правках меню.
+
+---
+
+## GitVerse — зеркало репозитория
+
+| | |
+|---|---|
+| **Репозиторий** | https://gitverse.ru/onsiteseq/gorbenkoteh |
+| **Remote** | `gitverse` (уже добавлен в `.git/config` с токеном) |
+| **Ветка** | `master` |
+| **Скрипт деплоя** | `gorbenkotech/onsiteseq/onsiteseq_site/push_gitverse_gorbenkoteh.sh` |
+
+### Запуск деплоя в GitVerse
+
+```bash
+bash /home/gorbenkoteh/gorbenkotech/onsiteseq/onsiteseq_site/push_gitverse_gorbenkoteh.sh
+# или с сообщением:
+bash /home/gorbenkoteh/gorbenkotech/onsiteseq/onsiteseq_site/push_gitverse_gorbenkoteh.sh "Описание изменений"
+```
+
+### Как работает скрипт
+
+Стратегия **orphan-push** (без тяжёлой истории):
+1. Создаётся временная ветка `gitverse-tmp` без истории коммитов
+2. Все текущие файлы добавляются и коммитятся в неё
+3. `git push --force gitverse gitverse-tmp:master` — пуш только актуального снимка (~11 МБ вместо 1.4 ГБ истории)
+4. Возврат на `master`, ветка `gitverse-tmp` удаляется
+
+### Грабли GitVerse
+
+- **HTTP 413** — если пушить с историей, репозиторий весит 1.4 ГБ (старые коммиты содержали `docs/assets/img/`). Orphan-стратегия решает это.
+- **Зависание `chmod`** — после неудачного большого push старая терминальная сессия зависает. Решение: очистить локи и открыть новую сессию:
+  ```bash
+  rm -f .git/index.lock .git/config.lock
+  ```
+- Запускать скрипт через `bash script.sh`, а не `./script.sh` — не нужны права на исполнение.
