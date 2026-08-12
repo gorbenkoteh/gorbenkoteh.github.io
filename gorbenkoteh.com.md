@@ -44,6 +44,21 @@ Workflow `.github/workflows/jekyll.yml` собирает и деплоит на 
 
 ---
 
+## Окружение этой машины (быстрый старт для ИИ-агента)
+
+- **`bundle`/`jekyll` НЕ в PATH.** Бинарники gem'ов лежат в
+  `~/.local/share/gem/ruby/3.2.0/bin` (там `bundle`, `jekyll`, `kramdown` и др.).
+  Перед сборкой: `export PATH="$HOME/.local/share/gem/ruby/3.2.0/bin:$PATH"`.
+- Системный Ruby: `/usr/bin/ruby` 3.2.3. Gems: `/var/lib/gems/3.2.0` +
+  `~/.local/share/gem/ruby/3.2.0`. Bundler установлен (4.0.x).
+- **`docs/deploy.sh` неполный** — строка rsync из него удалена, используйте
+  команду rsync из раздела «Два способа деплоя» ниже.
+- **Картинки не в git:** `.gitignore` исключает `docs/assets/img/` и
+  `docs/assets/pdf/` — фото попадают на сайт только через rsync-деплой,
+  в коммитах (GitHub/GitVerse) их нет и быть не должно.
+
+---
+
 ## Сборка сайта
 
 ### Вариант A — нативно, системный Ruby 3.2 (рекомендуется на этой Linux-машине)
@@ -135,6 +150,7 @@ docker run --rm -v "$PWD":/srv/jekyll -w /srv/jekyll \
 | **Remote** | `gitverse` (уже добавлен в `.git/config` с токеном) |
 | **Ветка** | `master` |
 | **Скрипт деплоя** | `gorbenkotech/onsiteseq/onsiteseq_site/push_gitverse_gorbenkoteh.sh` |
+| **Токен** | хранится в `~/.gitverse_token` (chmod 600). **Токен нельзя писать в чат.** |
 
 ### Запуск деплоя в GitVerse
 
@@ -160,3 +176,15 @@ bash /home/gorbenkoteh/gorbenkotech/onsiteseq/onsiteseq_site/push_gitverse_gorbe
   rm -f .git/index.lock .git/config.lock
   ```
 - Запускать скрипт через `bash script.sh`, а не `./script.sh` — не нужны права на исполнение.
+- **`Authentication failed`** — токен в URL remote протух/сменился. Обновить из файла, не печатая токен:
+  ```bash
+  cd /home/gorbenkoteh/gorbenkotech/gorbenkoteh.github.io_main
+  TOKEN=$(tr -d '[:space:]' < ~/.gitverse_token) \
+    && git remote set-url gitverse "https://commit:${TOKEN}@gitverse.ru/onsiteseq/gorbenkoteh.git"
+  ```
+- **Файлы пропадают из рабочей копии после orphan-push.** Если новый файл существовал
+  только в закоммиченном снимке `gitverse-tmp`, при возврате на `master` git его удаляет.
+  Восстановить из удалённой ветки (хэш виден в выводе `Deleted branch gitverse-tmp (was <hash>)`):
+  ```bash
+  git checkout <hash> -- <путь/к/файлу>
+  ```

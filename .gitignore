@@ -14,3 +14,7 @@ node_modules/
 # OS
 .DS_Store
 Thumbs.db
+
+# LoopX control-plane state (локальное, не коммитим)
+.loopx/
+.codex/
