@@ -18,3 +18,4 @@ Thumbs.db
 # LoopX control-plane state (локальное, не коммитим)
 .loopx/
 .codex/
+token.txt
