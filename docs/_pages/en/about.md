@@ -6,7 +6,7 @@ description: Contacts.
 nav: true
 nav_order: 8
 lang: en
-lang_ref: /about/
+lang_ref: /zh/about/
 display_categories: [about]
 horizontal: false
 ---

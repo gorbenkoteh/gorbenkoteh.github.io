@@ -1,18 +1,18 @@
 ---
 layout: page
-title: Courses
-permalink: /en/teaching/
-description: Courses
+title: 视频
+permalink: /zh/video/
+description: 关于 YouTube/RuTube 频道。
 nav: true
 nav_order: 3
-lang: en
-lang_ref: /zh/teaching/
-display_categories: [teaching]
-heading: Courses
+lang: zh
+lang_ref: /Video/
+display_categories: [video]
+heading: 视频
 horizontal: false
 ---
 
-<!-- _pages/en/teaching.md -->
+<!-- _pages/zh/video.md -->
 <div class="projects">
 {% if site.enable_project_categories and page.display_categories %}
   {% for category in page.display_categories %}

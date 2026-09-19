@@ -6,7 +6,7 @@ description: About the YouTube/RuTube channels.
 nav: true
 nav_order: 3
 lang: en
-lang_ref: /Video/
+lang_ref: /zh/video/
 display_categories: [video]
 heading: Video
 horizontal: false

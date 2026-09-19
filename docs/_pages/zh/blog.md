@@ -1,15 +1,15 @@
 ---
 layout: default
-permalink: /en/blog/
-title: Blog
+permalink: /zh/blog/
+title: 博客
 nav: true
 nav_order: 1
-lang: en
-lang_ref: /zh/blog/
+lang: zh
+lang_ref: /blog/
 pagination:
   enabled: true
   collection: posts
-  permalink: /en/page/:num/
+  permalink: /zh/page/:num/
   per_page: 5
   sort_field: date
   sort_reverse: true
@@ -21,8 +21,8 @@ pagination:
 <div class="post">
 
   <div class="header-bar">
-    <h1>GorbenkoTeh Blog</h1>
-    <h2>We'll fix everything. We'll figure everything out.</h2>
+    <h1>GorbenkoTeh 博客</h1>
+    <h2>我们会修好一切。我们会弄明白一切。</h2>
   </div>
 
   <ul class="post-list">
@@ -65,8 +65,8 @@ pagination:
       </h3>
       <p>{{ post.description }}</p>
       <p class="post-meta">
-        {{ read_time }} min read &nbsp; &middot; &nbsp;
-        {{ post.date | date: '%B %d, %Y' }}
+        {{ read_time }} 分钟阅读 &nbsp; &middot; &nbsp;
+        {{ post.date | date: '%Y年%m月%d日' }}
         {% if post.external_source %}
         &nbsp; &middot; &nbsp; {{ post.external_source }}
         {% endif %}

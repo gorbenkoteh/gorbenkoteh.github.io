@@ -1,18 +1,18 @@
 ---
 layout: page
-title: Courses
-permalink: /en/teaching/
-description: Courses
+title: 志愿服务
+permalink: /zh/volonter/
+description: 志愿服务
 nav: true
-nav_order: 3
-lang: en
-lang_ref: /zh/teaching/
-display_categories: [teaching]
-heading: Courses
+nav_order: 6
+lang: zh
+lang_ref: /volonter/
+display_categories: [volonter]
+heading: 志愿服务
 horizontal: false
 ---
 
-<!-- _pages/en/teaching.md -->
+<!-- _pages/zh/profiles.md -->
 <div class="projects">
 {% if site.enable_project_categories and page.display_categories %}
   {% for category in page.display_categories %}

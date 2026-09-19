@@ -6,7 +6,7 @@ description: Sports activities.
 nav: true
 nav_order: 7
 lang: en
-lang_ref: /sport/
+lang_ref: /zh/sport/
 display_categories: [sport]
 heading: Sport
 horizontal: false

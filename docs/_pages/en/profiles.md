@@ -6,7 +6,7 @@ description: Volunteering
 nav: true
 nav_order: 6
 lang: en
-lang_ref: /volonter/
+lang_ref: /zh/volonter/
 display_categories: [volonter]
 heading: Volunteering
 horizontal: false

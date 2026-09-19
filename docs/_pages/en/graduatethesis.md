@@ -6,7 +6,7 @@ description: PhD dissertation
 nav: true
 nav_order: 2
 lang: en
-lang_ref: /Graduatethesis/
+lang_ref: /zh/graduatethesis/
 ---
 
 <!-- _pages/en/graduatethesis.md -->

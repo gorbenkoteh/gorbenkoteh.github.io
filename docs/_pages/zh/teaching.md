@@ -1,18 +1,18 @@
 ---
 layout: page
-title: Courses
-permalink: /en/teaching/
-description: Courses
+title: 教学
+permalink: /zh/teaching/
+description: 课程
 nav: true
 nav_order: 3
-lang: en
-lang_ref: /zh/teaching/
+lang: zh
+lang_ref: /teaching/
 display_categories: [teaching]
-heading: Courses
+heading: 课程
 horizontal: false
 ---
 
-<!-- _pages/en/teaching.md -->
+<!-- _pages/zh/teaching.md -->
 <div class="projects">
 {% if site.enable_project_categories and page.display_categories %}
   {% for category in page.display_categories %}

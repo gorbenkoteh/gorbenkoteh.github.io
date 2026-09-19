@@ -44,7 +44,7 @@ layout: default
     <!-- News -->
     {% if page.news and site.announcements.enabled %}
       <h2>
-        <a href="{{ '/news/' | relative_url }}" style="color: inherit">{% if current_lang == 'en' %}News{% else %}Новости{% endif %}</a>
+        <a href="{{ '/news/' | relative_url }}" style="color: inherit">{% if current_lang == 'en' %}News{% elsif current_lang == 'zh' %}最新消息{% else %}Новости{% endif %}</a>
       </h2>
       {% include news.liquid limit=true %}
     {% endif %}
@@ -52,7 +52,7 @@ layout: default
     <!-- Latest posts -->
     {% if page.latest_posts %}
       <h2>
-        <a href="{{ '/blog/' | relative_url }}" style="color: inherit">{% if current_lang == 'en' %}Latest posts{% else %}Последние публикации{% endif %}</a>
+        <a href="{{ '/blog/' | relative_url }}" style="color: inherit">{% if current_lang == 'en' %}Latest posts{% elsif current_lang == 'zh' %}最新文章{% else %}Последние публикации{% endif %}</a>
       </h2>
       {% include latest_posts.liquid %}
     {% endif %}

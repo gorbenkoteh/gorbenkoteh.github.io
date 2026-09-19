@@ -6,7 +6,7 @@ description: A description of various projects.
 nav: true
 nav_order: 3
 lang: en
-lang_ref: /projects/
+lang_ref: /zh/projects/
 horizontal: false
 ---
 

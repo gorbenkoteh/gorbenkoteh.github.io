@@ -6,7 +6,7 @@ description: Study.
 nav: true
 nav_order: 5
 lang: en
-lang_ref: /study/
+lang_ref: /zh/study/
 display_categories: [study]
 heading: Study
 horizontal: false

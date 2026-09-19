@@ -3,6 +3,8 @@
   {% assign current_lang = page.lang | default: 'ru' %}
   {% if current_lang == 'en' %}
     {% assign home_url = '/en/' %}
+  {% elsif current_lang == 'zh' %}
+    {% assign home_url = '/zh/' %}
   {% else %}
     {% assign home_url = '/' %}
   {% endif %}
@@ -108,7 +110,7 @@
                 </li>
               {% else %}
                 <li class="nav-item {% if page.url contains p.permalink %}active{% endif %}">
-                  {% if p.nav_url %}{% assign url = p.nav_url %}{% elsif p.permalink contains '/blog/' %}{% if current_lang == 'en' %}{% assign url = '/en/blog/' %}{% else %}{% assign url = '/blog/' %}{% endif %}{% else %}{% assign url = p.url %}{% endif %}
+                  {% if p.nav_url %}{% assign url = p.nav_url %}{% elsif p.permalink contains '/blog/' %}{% if current_lang == 'en' %}{% assign url = '/en/blog/' %}{% elsif current_lang == 'zh' %}{% assign url = '/zh/blog/' %}{% else %}{% assign url = '/blog/' %}{% endif %}{% else %}{% assign url = p.url %}{% endif %}
                   <a class="nav-link" href="{{ url | relative_url }}">
                     {{- p.title }}
                     {% if page.url contains p.url %}
@@ -129,8 +131,12 @@
             </li>
           {% endif %}
 
-          <!-- Language toggle -->
+          <!-- Language toggle (cycle RU -> EN -> ZH -> RU via lang_ref) -->
           {% if current_lang == 'en' %}
+            {% assign lang_target = page.lang_ref | default: '/zh/' %}
+            {% assign lang_label = '中文' %}
+            {% assign lang_title = '中文版' %}
+          {% elsif current_lang == 'zh' %}
             {% assign lang_target = page.lang_ref | default: '/' %}
             {% assign lang_label = 'RU' %}
             {% assign lang_title = 'Русская версия' %}

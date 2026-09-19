@@ -6,7 +6,7 @@ img: assets/shortstories/henrietta_lacks_cover.png
 importance: 1
 category: shortstories_en
 lang: en
-lang_ref: /projects/HenriettaLacks/
+lang_ref: /projects/HenriettaLacksZh/
 ---
 
 *Русская версия: [Воскрешение Генриетты Лакс](/projects/HenriettaLacks/) · 中文版：[复活亨丽埃塔·拉克斯](/projects/HenriettaLacksZh/)*

@@ -1,18 +1,18 @@
 ---
 layout: page
-title: Courses
-permalink: /en/teaching/
-description: Courses
+title: 运动
+permalink: /zh/sport/
+description: 体育活动。
 nav: true
-nav_order: 3
-lang: en
-lang_ref: /zh/teaching/
-display_categories: [teaching]
-heading: Courses
+nav_order: 7
+lang: zh
+lang_ref: /sport/
+display_categories: [sport]
+heading: 运动
 horizontal: false
 ---
 
-<!-- _pages/en/teaching.md -->
+<!-- _pages/zh/sport.md -->
 <div class="projects">
 {% if site.enable_project_categories and page.display_categories %}
   {% for category in page.display_categories %}

@@ -1,17 +1,17 @@
 ---
 layout: page
-title: Short stories
-permalink: /en/shortstories/
-description: Short stories
+title: 故事
+permalink: /zh/shortstories/
+description: 短篇故事
 nav: true
 nav_order: 9
-lang: en
-lang_ref: /zh/shortstories/
-display_categories: [shortstories_en]
+lang: zh
+lang_ref: /shortstories/
+display_categories: [shortstories_zh]
 horizontal: false
 ---
 
-<!-- _pages/en/shortstories.md -->
+<!-- _pages/zh/shortstories.md -->
 <div class="projects">
 {% if site.enable_project_categories and page.display_categories %}
   {% for category in page.display_categories %}
