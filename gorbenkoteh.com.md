@@ -126,6 +126,16 @@ docker run --rm -v "$PWD":/srv/jekyll -w /srv/jekyll \
 
 ## Двуязычность (RU + EN)
 
+**Обновление 2026-09: теперь ТРИ языка — RU + EN + ZH (中文).**
+- ZH-страницы: `_pages/zh/` (12 штук), permalink `/zh/...`, `lang: zh`.
+- Переключатель в навбаре — **цикл RU → EN → 中文 → RU** через цепочку
+  `lang_ref`: RU-страница → EN-версия, EN-страница → ZH-версия, ZH-страница → RU-версия.
+  При добавлении новой страницы lang_ref всех трёх версий должны образовывать этот цикл.
+- UI-строки zh в `_layouts/about.liquid`: 最新消息 (News), 最新文章 (Latest posts).
+- `/zh/shortstories/` использует `display_categories: [shortstories_zh]`
+  (китайская карточка рассказа: `_projects/HenriettaLacksZh.md`).
+- Контент карточек и постов на zh НЕ переведён (как и на en) — только каркас.
+
 Механизм самодельный (в al-folio нет i18n из коробки).
 
 - Каждая страница имеет front-matter:
