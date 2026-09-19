@@ -53,6 +53,20 @@ rsync -az --checksum --delete \
 Workflow `.github/workflows/jekyll.yml` собирает и деплоит на GitHub Pages
 при каждом push в `main`.
 
+- **Токен:** `token2.txt` в корне репо (в `.gitignore`, в чат не писать).
+  Fine-grained PAT с правами **Contents: RW + Workflows: RW** (без Workflows
+  пуш отклоняется — в дереве есть `.github/workflows/jekyll.yml`).
+  Remote `origin` содержит токен в URL.
+- **Локальная ветка `master` пушится в `origin/main`:** `git push origin master:main`.
+- **С 2026-09 картинки включены в зеркало:** 655 файлов (~1.4 ГБ)
+  добавлены через `git add -f` поверх `.gitignore` и запушены чанками ~200 МБ.
+  Файлы tracked, поэтому gitignore на них больше не действует.
+- ⚠️ **Конфликт с GitVerse-скриптом:** orphan-скрипт `push_gitverse_gorbenkoteh.sh`
+  делает `git add -A` → tracked-картинки попадут в orphan-коммит → пуш 1.4 ГБ
+  в GitVerse даст HTTP 413. Перед GitVerse-пушем картинки нужно исключать
+  (например, `git reset docs/assets/img docs/assets/pdf` после `git add -A`
+  в скрипте) или обновить скрипт.
+
 ---
 
 ## Окружение этой машины (быстрый старт для ИИ-агента)
