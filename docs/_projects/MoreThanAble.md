@@ -24,13 +24,13 @@ category: volonter
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/volonteer/morethanable/mta_lukoil_arena.jpg" title="Лукойл Арена — стартовый городок Московского марафона" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid path="assets/img/volonteer/morethanable/mta_lukoil_arena.jpg" title="Лукойл Арена — Экспо Московского марафона" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.liquid path="assets/img/volonteer/morethanable/mta_banner.jpg" title="Беговые экскурсии на Московском марафоне: 10 км и 42,2 км" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
-*Лукойл Арена — стартовый городок марафона. Баннер «Больше Чем Можешь» × «Магнит Всевозможный»: беговые экскурсии на 10 км и 42,2 км, все средства — фонду.*
+*На Лукойл Арене проходило Экспо марафона. Баннер «Больше Чем Можешь» × «Магнит Всевозможный»: беговые экскурсии на 10 км и 42,2 км, все средства — фонду.*
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
