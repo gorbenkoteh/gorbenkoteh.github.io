@@ -89,6 +89,13 @@ category: study
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-8 mt-3 mt-md-0">
+        {% include figure.liquid path="assets/img/study/rnimu/rnimu_donor_anketa.png" title="Анкета донора РНИМУ: записался на сдачу крови" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+*Анкета донора РНИМУ: записался на сдачу крови — выбрал дату и время.*
+
+<div class="row justify-content-sm-center">
+    <div class="col-sm-8 mt-3 mt-md-0">
         {% include figure.liquid path="assets/img/study/rnimu/donor_pirogov2.jpg" title="Большая неделя донора + HLA-типирование в РНИМУ" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
