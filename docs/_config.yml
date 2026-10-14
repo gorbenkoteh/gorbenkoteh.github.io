@@ -234,6 +234,15 @@ exclude:
   - purgecss.config.js
   - README.md
   - vendor
+  # служебные deploy-файлы и возможные секреты — не публиковать
+  - deploy.sh
+  - deploy_gorbenkoteh.bat
+  - docker-compose-slim.yml
+  - "*.pem"
+  - "*.key"
+  - "*token*"
+  - "id_*"
+  - gorbenkoteh2
 keep_files:
   - CNAME
   - .nojekyll
