@@ -53,10 +53,14 @@ rsync -az --checksum --delete \
 Workflow `.github/workflows/jekyll.yml` собирает и деплоит на GitHub Pages
 при каждом push в `main`.
 
-- **Токен:** `token2.txt` в корне репо (в `.gitignore`, в чат не писать).
-  Fine-grained PAT с правами **Contents: RW + Workflows: RW** (без Workflows
-  пуш отклоняется — в дереве есть `.github/workflows/jekyll.yml`).
-  Remote `origin` содержит токен в URL.
+- **Токены:** с 2026-10-16 вынесены из репозитория в `~/.secrets/gorbenkotech/`
+  (`token.txt`, `token2.txt`, chmod 600; в чат не писать). Fine-grained PAT с правами
+  **Contents: RW + Workflows: RW** (без Workflows пуш отклоняется — в дереве есть
+  `.github/workflows/jekyll.yml`). Remote `origin` — без токена в URL
+  (`https://github.com/gorbenkoteh/gorbenkoteh.github.io.git`), авторизация через
+  глобальный credential helper с `~/.github_token`. Если пуш правок workflow
+  отклоняется — подставить PAT с Workflows разово:
+  `git -c credential.helper= -c credential.helper='!f() { echo username=gorbenkoteh; echo "password=$(cat ~/.secrets/gorbenkotech/token2.txt)"; }; f' push origin master:main`.
 - **Локальная ветка `master` пушится в `origin/main`:** `git push origin master:main`.
 - **С 2026-09 картинки включены в зеркало:** 655 файлов (~1.4 ГБ)
   добавлены через `git add -f` поверх `.gitignore` и запушены чанками ~200 МБ.

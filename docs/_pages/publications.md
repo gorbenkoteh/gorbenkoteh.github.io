@@ -2,7 +2,7 @@
 layout: page
 permalink: /publications/
 title: Статьи
-description: Статьи, вышедший в различных изданиях и сетевых ресурсах.
+description: Статьи, вышедшие в различных изданиях и сетевых ресурсах.
 nav: true
 nav_order: 2
 lang: ru

@@ -6,22 +6,22 @@ first_name:
 middle_name: 
 last_name: ГорбенкоТех
 email: roman-gorbenko@yandex.ru
-description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
+description: >-
+  ГорбенкоТех — Роман Горбенко: студент МФТИ, Team Lead OnSiteSeq. Блог, проекты, учёба, волонтёрство и спорт.
 footer_text: >
-  Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
-  Hosted by <a href="http://h3llo.cloud" target="_blank"></a>h3llo cloud.<br/>
-  <a href="/Video/" target="_blank"><img src="/assets/img/youtube.jpg"  title="YouTube" alt="YouTube"/></a>
-  <a href="/about" target="_blank"><img src="/assets/img/telegram.jpg"  title="Telegram" alt="Telegram"/></a>
-  <a href="/about" target="_blank"><img src="/assets/img/vk.png"  title="Telegram" alt="VK"/></a>
-  <a href="/about" target="_blank"><img src="/assets/img/dzen.png"  title="Telegram" alt="Dzen"/></a>.
+  Powered by <a href="https://jekyllrb.com/">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
+  Hosted by <a href="https://h3llo.cloud">h3llo cloud</a>.<br/>
+  <a href="/Video/"><img src="/assets/img/youtube.jpg" title="YouTube" alt="YouTube"/></a>
+  <a href="https://t.me/gorbenko_teh"><img src="/assets/img/telegram.jpg" title="Telegram" alt="Telegram"/></a>
+  <a href="https://vk.com/gorbenkoteh"><img src="/assets/img/vk.png" title="VK" alt="VK"/></a>
+  <a href="https://dzen.ru/gorbenkoteh"><img src="/assets/img/dzen.png" title="Дзен" alt="Дзен"/></a>
 
-keywords: jekyll, jekyll-theme, academic-website, portfolio-website # add your own keywords or leave empty
-lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
+keywords: ГорбенкоТех, Роман Горбенко, МФТИ, OnSiteSeq, биоинформатика, волонтёрство, марафон
+lang: ru # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: ⚛️ # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
-domain: #
-url: # the base hostname & protocol for your site
+domain: gorbenkotech.com
+url: https://gorbenkotech.com # the base hostname & protocol for your site
 baseurl: #
 last_updated: false # set to true if you want to display last updated in the footer
 impressum_path: # set to path to include impressum link in the footer, use the same path as permalink in a page, helps to conform with EU GDPR
@@ -108,7 +108,7 @@ zotero_username: # your zotero username
 wechat_qr: # filename of your wechat qr-code saved as an image (e.g., wechat-qr.png if saved to assets/img/wechat-qr.png)
 
 contact_note: >
-  You can even add a little note about which of these is the best way to reach you.
+  Быстрее всего ответ придёт в Telegram: @gorbenkoteh.
 
 # -----------------------------------------------------------------------------
 # Analytics and search engine verification
@@ -155,7 +155,7 @@ giscus:
   lang: en
 
 # Disqus comments (DEPRECATED)
-disqus_shortname: al-folio # put your disqus shortname
+disqus_shortname: # put your disqus shortname
 # https://help.disqus.com/en/articles/1717111-what-s-a-shortname
 
 # External sources.
@@ -314,8 +314,8 @@ display_categories:
 # -----------------------------------------------------------------------------
 
 scholar:
-  last_name: [Einstein]
-  first_name: [Albert, A.]
+  last_name: [Горбенко, Gorbenko]
+  first_name: [Роман, Roman, Р., R.]
 
   style: apa
   locale: en

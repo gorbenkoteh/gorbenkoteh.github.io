@@ -47,10 +47,10 @@ SAP SE — немецкая компания, производитель про�
 openSAP:<br/>
 
 openSAP — это корпоративная платформа  онлайн-курсов. Развивалась совместно SAP и институтом Хассо Платтнера в Потсдаме, Германия. 
-К сожалению, по состоянию на янлварь 2025г платформа закрыта, курсы переехали на https://learning.sap.com *
+К сожалению, по состоянию на январь 2025г платформа закрыта, курсы переехали на https://learning.sap.com *
 <br/>
  
- *<a href="https://learning.sap.com/opensap-course-migration">Статья про миграцию</a>
+ *<a href="https://learning.sap.com/">SAP Learning — новая площадка курсов openSAP</a>
 <br/>
 
 Когда платформа работала прошёл обучение и получил следующие openSAP сертификаты:
@@ -78,4 +78,4 @@ openSAP — это корпоративная платформа  онлайн-�
 <br/>
 Интеграция:
 <br/>
-<li><a href="https://https://github.com/basisteam-io/BasisTeam-Content/blob/master/certif/btp3_RecordOfAchievement.pdf">Modernize Integration with SAP Integration Suite</a></li>
+<li><a href="https://github.com/basisteam-io/BasisTeam-Content/blob/master/certif/btp3_RecordOfAchievement.pdf">Modernize Integration with SAP Integration Suite</a></li>
