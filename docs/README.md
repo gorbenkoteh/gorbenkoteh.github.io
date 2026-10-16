@@ -16,7 +16,9 @@
 ## О сайте
 
 Персональный сайт-портфолио на тему [al-folio](https://github.com/alshedivat/al-folio) (Jekyll).  
-**Двуязычный**: русская версия (по умолчанию) + английская под `/en/`.
+**Трёхъязычный**: русская версия (по умолчанию), английская под `/en/` и китайская под `/zh/`.
+
+**Есть рассказы**: [раздел на сайте](https://gorbenkotech.com/shortstories/) с отдельными языковыми версиями, полными текстами и обложками.
 
 | Параметр | Значение |
 |---|---|
@@ -34,9 +36,10 @@
 gorbenkoteh.github.io_main/
 ├── docs/                    # Исходники сайта (Jekyll)
 │   ├── _config.yml          # Основной конфиг Jekyll
-│   ├── _pages/              # Страницы навбара (RU + EN)
-│   │   └── en/              # EN-версии страниц (/en/...)
-│   ├── _projects/           # Карточки проектов для галерей
+│   ├── _pages/              # Страницы навбара (RU + EN + ZH)
+│   │   ├── en/              # EN-версии страниц (/en/...)
+│   │   └── zh/              # ZH-версии страниц (/zh/...)
+│   ├── _projects/           # Карточки проектов и рассказов для галерей
 │   ├── _news/               # Короткие анонсы на главной
 │   ├── _posts/              # Посты блога (80+, фото-репортажи)
 │   ├── _bibliography/
@@ -49,6 +52,7 @@ gorbenkoteh.github.io_main/
 │   │   ├── js/              # JavaScript
 │   │   ├── img/             # Изображения (в .gitignore, локально)
 │   │   ├── pdf/             # PDF-файлы (в .gitignore, локально)
+│   │   ├── shortstories/    # Тексты, обложки и генераторы обложек рассказов
 │   │   └── video/           # Видео-файлы
 │   ├── deploy.sh            # Скрипт rsync-деплоя на продакшен-сервер
 │   └── _site/               # Собранный сайт (в .gitignore)
@@ -69,21 +73,38 @@ gorbenkoteh.github.io_main/
 | `teaching` | Преподавание |
 | `volonter` | Волонтёрство |
 | `about` | О себе |
+| `shortstories` | Рассказы (RU) |
+| `shortstories_en` | Short stories (EN) |
+| `shortstories_zh` | 故事 / рассказы (ZH) |
 
 ---
 
-## Двуязычность (RU + EN)
+## Трёхъязычность (RU + EN + ZH)
 
 Механизм самодельный (в al-folio нет i18n из коробки).
 
-- Каждая страница имеет front-matter `lang: ru` | `en` и `lang_ref: <permalink>`
+- Каждая страница имеет front-matter `lang: ru` | `en` | `zh` и `lang_ref: <permalink>`
 - Навбар (`_includes/header.liquid`) фильтрует пункты по языку
-- Переключатель **EN / РУ** (`.lang-toggle`) ведёт на `page.lang_ref`
+- Переключатель языка (`.lang-toggle`) образует цикл **РУ → EN → 中文 → РУ** через `page.lang_ref`
 - EN-страницы: `_pages/en/*` с permalink `/en/...`
+- ZH-страницы: `_pages/zh/*` с permalink `/zh/...`
 
 **Что переведено:**
 - ✅ Навбар, переключатель, все статические страницы, UI-строки
-- ❌ Карточки `_projects/` и посты `_posts/` — пока на русском
+- ✅ Раздел рассказов и опубликованные переводы рассказов
+- ⚠️ Остальные карточки `_projects/` и посты `_posts/` — преимущественно на русском
+
+---
+
+## Рассказы
+
+Раздел доступен на всех трёх языках:
+
+- RU: [gorbenkotech.com/shortstories/](https://gorbenkotech.com/shortstories/)
+- EN: [gorbenkotech.com/en/shortstories/](https://gorbenkotech.com/en/shortstories/)
+- 中文: [gorbenkotech.com/zh/shortstories/](https://gorbenkotech.com/zh/shortstories/)
+
+Каждая опубликованная языковая версия рассказа — отдельная карточка в `_projects/` со своей обложкой, интро и полным текстом. Исходные TXT, PNG/SVG и генераторы обложек хранятся в `docs/assets/shortstories/`.
 
 ---
 
