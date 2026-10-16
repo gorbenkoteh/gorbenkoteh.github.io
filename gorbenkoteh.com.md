@@ -49,6 +49,11 @@ rsync -az --checksum --delete \
   ./_site/ user@91.188.212.199:/var/www/gorbenkotech/
 ```
 
+- **Nginx (2026-10):** включена своя 404-страница (`error_page 404 /404.html;`)
+  и редирект `www → без www` (301) в `/etc/nginx/sites-available/gorbenkotech.com`.
+  Бэкап до изменения: `/root/gorbenkotech.com.nginx.bak`.
+  После правок: `sudo nginx -t && sudo systemctl reload nginx`.
+
 ### 2. GitHub Pages (зеркало gorbenkoteh.github.io)
 Workflow `.github/workflows/jekyll.yml` собирает и деплоит на GitHub Pages
 при каждом push в `main`.
