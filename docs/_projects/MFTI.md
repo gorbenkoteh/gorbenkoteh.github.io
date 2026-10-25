@@ -61,6 +61,29 @@ category: study
     </div>
 </div>
 
+---
+
+**Вручение дипломов:**<br/>
+<br/>
+Видео церемонии вручения дипломов:
+
+<div class="row justify-content-sm-center">
+    <div class="col-sm-10 mt-3 mt-md-0">
+       <iframe width="480" height="270" src="https://dzen.ru/embed/og0YojrcPAAA?from_block=partner&from=zen&mute=0&autoplay=0&tv=0" allow="autoplay; fullscreen; accelerometer; gyroscope; picture-in-picture; encrypted-media" data-testid="embed-iframe" frameborder="0" scrolling="no" allowfullscreen></iframe>
+    </div>
+</div>
+<br/>
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid path="assets/img/study/mfti/diploma/vruchenie_1.jpg" title="Вручение диплома МФТИ" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid path="assets/img/study/mfti/diploma/vruchenie_2.jpg" title="Выпускники с дипломами на сцене" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+*Вручение диплома и общее фото выпускников.*
+
 <br/>
 
 ---
