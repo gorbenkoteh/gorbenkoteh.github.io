@@ -17,7 +17,7 @@ Which field of knowledge did I choose?<br/>
 Field: 1.5.8. Mathematical biology, bioinformatics.<br/>
 
 Which topic will I be working on?<br/>
-Developing approaches to accelerating genome assembly using GPGPU (general-purpose computing on graphics processing units).<br/>
+Development of methods for analyzing nanopore sequencing results for diagnosis of pathogen drug resistance.<br/>
 <br/><br/>
 Practical steps.<br/><br/>
 The practical steps for selecting a topic include: reviewing catalogs of defended dissertations on the research topic, analyzing no fewer than 10 works;
