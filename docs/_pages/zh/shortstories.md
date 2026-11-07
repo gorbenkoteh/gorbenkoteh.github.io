@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 故事
+title: 故事与剧本
 permalink: /zh/shortstories/
 description: 短篇故事
 nav: true

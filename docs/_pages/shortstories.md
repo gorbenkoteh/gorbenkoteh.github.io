@@ -1,8 +1,8 @@
 ---
 layout: page
 permalink: /shortstories/
-title: Рассказы
-description: Рассказы
+title: Рассказы и сценарии
+description: Рассказы и сценарии
 nav: true
 nav_order: 9
 lang: ru

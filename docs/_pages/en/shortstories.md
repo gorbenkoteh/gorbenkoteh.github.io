@@ -1,8 +1,8 @@
 ---
 layout: page
-title: Short stories
+title: Stories & Scripts
 permalink: /en/shortstories/
-description: Short stories
+description: Stories & Scripts
 nav: true
 nav_order: 9
 lang: en
